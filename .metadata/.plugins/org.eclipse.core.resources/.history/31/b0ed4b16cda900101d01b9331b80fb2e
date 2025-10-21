@@ -1,0 +1,69 @@
+package com.klef.cicd.lab.entity;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "pickle_table")
+public class Pickle {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    private String pickleName;
+    private String pickleType;      // e.g., Mango, Lemon, Garlic
+    private double price;
+    private String quantity;        // e.g., "500g", "1kg"
+    private String imageUrl;
+    private String description;
+
+    // Getters and Setters
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPickleName() {
+        return pickleName;
+    }
+    public void setPickleName(String pickleName) {
+        this.pickleName = pickleName;
+    }
+
+    public String getPickleType() {
+        return pickleType;
+    }
+    public void setPickleType(String pickleType) {
+        this.pickleType = pickleType;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+}
