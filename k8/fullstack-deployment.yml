@@ -73,7 +73,7 @@ spec:
         - name: backend
           image: godavarthibhargava/k8-pickle-backend:first  # <-- change this
           ports:
-            - containerPort: 1777
+            - containerPort: 2000
 ---
 apiVersion: v1
 kind: Service
@@ -85,8 +85,8 @@ spec:
     app: backend
   ports:
     - protocol: TCP
-      port: 1777
-      targetPort: 1777
+      port: 2000
+      targetPort: 2000
       nodePort: 30026       # Optional fixed NodePort (range 30000–32767)
   type: NodePort
 ---
