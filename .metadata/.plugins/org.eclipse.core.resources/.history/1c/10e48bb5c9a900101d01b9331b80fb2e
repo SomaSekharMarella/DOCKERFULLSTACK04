@@ -1,5 +1,0 @@
-package com.klef.cicd.lab.repository;
-
-public class PickleRepository {
-
-}
